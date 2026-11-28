@@ -16,18 +16,22 @@ int main(){
         if(sirja){
             if(vec[0] > vec[n-1-i]){
                 s+=vec[0];
+                vec.erase(vec.begin());
             }
             else{
                 s+=vec[n-1-i];
+                vec.pop_back();
             }
             sirja=0;
         }
         else{
             if(vec[0] > vec[n-1-i]){
                 d+=vec[0];
+                vec.erase(vec.begin());
             }
             else{
                 d+=vec[n-1-i];
+                vec.pop_back();
             }
             sirja=1;
         }
